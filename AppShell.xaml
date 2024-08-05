@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="EntryTest.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:EntryTest"
+    Shell.FlyoutBehavior="Disabled"
+    Title="EntryTest">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:NewPage1}"
+        Route="NewPage1" />
+
+    <!--
+        The destination page must be setup using routing rather than in the Shell in order to pass items through the IQueryAttributable.
+        So instead of initializing in the AppShell.xaml, add the route in the AppShell.xaml.cs code behind.
+    -->
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:NewPage2}"
+        Route="NewPage2" />-->
+</Shell>
+
